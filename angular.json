@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "shipping-portal"
+  "defaultProject": "shipping-portal",
+  "cli": {
+    "analytics": false
+  }
 }
