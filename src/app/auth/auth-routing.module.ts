@@ -7,6 +7,7 @@ import { SignupComponent } from './componenets/signup/signup.component';
 import { ResetPasswordComponent } from './componenets/reset-password/reset-password.component';
 
 const routes: Routes = [
+  { path:'', redirectTo:'login',pathMatch:'full'},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },

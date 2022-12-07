@@ -30,7 +30,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatCommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSlideToggleModule
   ]
 })
 export class MaterialModule { }

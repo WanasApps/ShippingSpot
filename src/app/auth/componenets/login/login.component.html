@@ -1,55 +1,41 @@
 <div class="card shadow p-5 mb-5 bg-light" style="border-radius: 2rem;">
   <div class="card-body py-5 px-md-5">
     <form>
-      <!-- 2 column grid layout with text inputs for the first and last names -->
-      <!--
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="form-outline">
-              <input type="text" id="form3Example1" class="form-control" />
-              <label class="form-label" for="form3Example1">First name</label>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="form-outline">
-              <input type="text" id="form3Example2" class="form-control" />
-              <label class="form-label" for="form3Example2">Last name</label>
-            </div>
-          </div>
-        </div>
-        -->
-      <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="form3Example3" class="form-control" />
-        <label class="form-label" for="form3Example3" style="color: rgba(95,36,131,1);">Username</label>
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix><i class="fa fa-user-circle" aria-hidden="true"></i></mat-icon>
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
       </div>
-
-      <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="form3Example4" class="form-control" />
-        <label class="form-label" for="form3Example4" style="color: rgba(95,36,131,1);">Password</label>
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidePassword">
+            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
       </div>
-
-      <!-- Checkbox -->
       <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-        <label class="form-check-label" for="form2Example33">
-          Keep me Login
-        </label>
+        <mat-slide-toggle class="example-margin" color="primary" [checked]="checked">
+          Keep Me Login
+        </mat-slide-toggle>
       </div>
       <div class="row d-flex justify-content-center">
         <!-- Submit button -->
         <div class="col d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary btn-block">
-            Login
-          </button>
+          <button mat-flat-button color="primary">Login</button>
         </div>
         <div class="col d-flex justify-content-center">
-          <button type="Register" class="btn btn-primary btn-block">
-            Register
-          </button>
+          <button routerLink="../signup" mat-stroked-button color="accent">Or Register</button>
+
         </div>
       </div>
     </form>
+
+
   </div>
 </div>

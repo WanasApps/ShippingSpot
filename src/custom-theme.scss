@@ -12,8 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$shipping-portal-primary: mat.define-palette(P800);
-$shipping-portal-accent: mat.define-palette(S400);
+$shipping-portal-primary: mat.define-palette(mat.$indigo-palette,800);
+$shipping-portal-accent: mat.define-palette(mat.$indigo-palette,400);
 
 // The warn palette is optional (defaults to red).
 $shipping-portal-warn: mat.define-palette(mat.$red-palette);
